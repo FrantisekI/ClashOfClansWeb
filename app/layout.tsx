@@ -1,3 +1,4 @@
+'use client';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -5,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import localFont from 'next/font/local';
+import { useState } from "react";
 const myFont = localFont({
   src: '../styles/fonts/Supercell-Magic3.ttf',
   display: 'swap',
@@ -30,19 +32,30 @@ export default function RootLayout({
 }>) {
   
 
+  const [showDiv, setShowDiv] = useState(false);
+
+  const handleClick = () => {
+    setShowDiv(!showDiv);
+  };
+
   return (
     <html lang="cz">
       <head>
         <link rel="icon" href="/omega.svg" />
       </head>
       <body className={myFont.className}>
-        
         <nav>
-          <Image src="/hamburger.svg" className="hamburger" alt="omega" width={50} height={50} />
-                   
+          <Image
+            src="/hamburger.svg"
+            className="hamburger"
+            alt="omega"
+            width={50}
+            height={50}
+            onClick={handleClick}
+          />
           <MyNav />
-          
         </nav>
+        {showDiv && <div>Revealed div</div>}
         {children}
       </body>
     </html>
