@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 
 import { usePathname } from "next/navigation";
 import localFont from 'next/font/local';
@@ -38,7 +39,9 @@ export default function RootLayout({
       <body className={myFont.className}>
         
         <nav>
-          <img src="/hamburger.svg" className="hamburger"/>
+          <Image src="/hamburger.svg" className="hamburger" alt="omega" width={50} height={50} />
+          
+          
           <ul>
             <li className={isActive('/') ? 'active' : ''}>
               <Link 

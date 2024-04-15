@@ -21,7 +21,6 @@
 body{
   background-color: var(--background);
   font-family: 'COCfont', sans-serif;
-  color: var(--foreground);
 
 }
 
@@ -36,7 +35,7 @@ body{
 
 
 nav {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 1rem;
 }
 
@@ -48,7 +47,7 @@ nav ul {
 }
 
 .nav-button {
-  background-color: var(--primary);
+
   padding-top: 10px;
   padding-bottom: 10px;
   flex: 1;
@@ -68,7 +67,7 @@ nav ul {
 
 .active {
   /* Styles for the active link, e.g., */
-  background-color: var(--secondary);
+  background-color: var(--accent);
   
 }
 
@@ -82,10 +81,30 @@ nav ul li {
   margin: 0 10px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 100px;
+   
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  
+  flex: 1; /* fill available horizontal space */
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: var(--foreground);
+  width: 100%;
+}
 
 
 
-/* Media query for screens smaller than 494px */
 @media (max-width: 550px) {
   body{
     display: block;
@@ -113,5 +132,8 @@ nav ul li {
     display: block;
     visibility: visible;
     float: left;
+  }
+  .container{
+    padding: 0;
   }
 }
