@@ -81,7 +81,7 @@ nav ul li {
   margin: 0 10px;
 }
 
-.container {
+.main{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,7 +133,7 @@ nav ul li {
     visibility: visible;
     float: left;
   }
-  .container{
+  .main{
     padding: 0;
   }
 }

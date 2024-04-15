@@ -5,7 +5,7 @@ const Page: React.FC = () => {
   return (
 
 
-    <div className='container'>
+    <div className='main'>
       <div className='section'>
 
 
