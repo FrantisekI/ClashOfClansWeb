@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { usePathname } from "next/navigation";
 import localFont from 'next/font/local';
 const myFont = localFont({
