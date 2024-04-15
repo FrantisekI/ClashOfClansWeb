@@ -3,31 +3,115 @@
 @tailwind utilities;
 
 :root {
+  --background: #DBA979;
+  --primary: #ECCA9C;
+  --secondary: #E8EFCF;
+  --accent: #AFD198;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+/*@font-face {
+  font-family: 'COCfont';
+  src: url('./styles/fonts/Supercell.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  background-color: var(--background);
+  font-family: 'COCfont', sans-serif;
+  color: var(--foreground);
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+nav {
+  background-color: var(--primary);
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+.nav-button {
+  background-color: var(--primary);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex: 1;
+  
+  border-radius: 10px;
+  color: var(black);
+  text-decoration: none;
+  width: 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+.hamburger {
+  display: none;
+  visibility: hidden;
+}
+
+
+.active {
+  /* Styles for the active link, e.g., */
+  background-color: var(--secondary);
+  
+}
+
+
+nav ul li {
+  border-radius: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+
+
+
+/* Media query for screens smaller than 494px */
+@media (max-width: 550px) {
+  body{
+    display: block;
+  }
+  nav ul li{
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    flex: 0;
+    width: auto;
+  }
+  nav ul{
+    display: block;
+    flex: 1;
+  }
+  nav{
+    display: flex; 
+    align-items: center;
+  }
+  .active{
+    display: block;
+    width: auto;
+  }
+  .hamburger {
+    display: block;
+    visibility: visible;
+    float: left;
   }
 }
