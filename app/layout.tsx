@@ -32,11 +32,20 @@ export default function RootLayout({
 }>) {
   
 
-  const [showDiv, setShowDiv] = useState(false);
+  /*const [showDiv, setShowDiv] = useState(false);
 
   const handleClick = () => {
     setShowDiv(!showDiv);
   };
+  <Image
+            src="/hamburger.svg"
+            className="hamburger"
+            alt="omega"
+            width={50}
+            height={50}
+            onClick={handleClick}
+          />
+          {showDiv && <div>Revealed div</div>}*/
 
   return (
     <html lang="cz">
@@ -45,17 +54,10 @@ export default function RootLayout({
       </head>
       <body className={myFont.className}>
         <nav>
-          <Image
-            src="/hamburger.svg"
-            className="hamburger"
-            alt="omega"
-            width={50}
-            height={50}
-            onClick={handleClick}
-          />
+          
           <MyNav />
         </nav>
-        {showDiv && <div>Revealed div</div>}
+        
         {children}
       </body>
     </html>

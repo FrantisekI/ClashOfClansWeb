@@ -102,31 +102,48 @@ nav ul li {
   color: var(--foreground);
   width: 100%;
 }
+.pop-up-nav{
+  display: none;
 
+}
 
 
 @media (max-width: 550px) {
   body{
     display: block;
   }
-  nav ul li{
-    display: none;
-    flex-direction: column;
-    padding: 0;
-    flex: 0;
-    width: auto;
-  }
-  nav ul{
-    display: block;
-    flex: 1;
-  }
   nav{
     display: flex; 
     align-items: center;
   }
+  nav ul{
+    display: block;
+    flex: 1;
+    padding: 20px 0;
+  }
+  .default-nav{
+    display: none;
+    padding: 0;
+    flex: 0;
+    width: auto;
+    margin: 0;
+  }
+
+
+  .show-div{
+    display: inline;
+  }
+  .pop-up-nav{
+    display: flex;
+    padding: 0;
+    flex: 0;
+    width: auto;
+    margin: 5px 0;
+  }
   .active{
     display: block;
     width: auto;
+
   }
   .hamburger {
     display: block;
@@ -136,4 +153,5 @@ nav ul li {
   .main{
     padding: 0;
   }
+  
 }
