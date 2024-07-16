@@ -1,18 +1,38 @@
 
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+
+import ClanWarEndTime from '../components/ClanWarEndTime'; 
+
+
+
+
 
 const Page: React.FC = () => {
   return (
 
 
     <div className='main'>
+      <div className='section'>
+        <h1>
+          Omega CZ
+        </h1>
 
+
+      </div>
+
+      <div className='section'>
+      <ClanWarEndTime />
+      </div>
       
 
 
 
 
         <div className='section'>
+
+
+
           <p>Jsme přátelský a pohodový klan, který uvítá aktivní hráče mobilní hry 
              <a href="https://supercell.com/en/games/clashofclans/" target="_blank" rel="noopener">
               Clash of Clans</a>.

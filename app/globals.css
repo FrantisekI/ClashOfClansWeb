@@ -112,6 +112,12 @@ nav ul li {
 
 }
 
+h1{
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+
 @media (max-width: 550px) {
   body{
     display: block;
