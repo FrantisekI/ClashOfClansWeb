@@ -12,17 +12,19 @@ const myFont = localFont({
   display: 'swap',
 });
 
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 
 const inter = Inter({ subsets: ["latin"] });
 
-/*export const metadata: Metadata = {
-  title: "FrantisekDoMaths",
-  description: "Metadata for the FrantisekDoMaths application",
-};*/
-
 import MyNav from "@/components/navigationList";
-/*import MyComponent from "@/components/test";*/
+
 
 
 export default function RootLayout({
@@ -30,29 +32,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-
-  /*const [showDiv, setShowDiv] = useState(false);
-
-  const handleClick = () => {
-    setShowDiv(!showDiv);
-  };
-  <Image
-            src="/hamburger.svg"
-            className="hamburger"
-            alt="omega"
-            width={50}
-            height={50}
-            onClick={handleClick}
-          />
-          {showDiv && <div>Revealed div</div>}*/
-
   return (
     <html lang="cz">
       <head>
         <link rel="icon" href="/omega.svg" />
       </head>
-      <body className={myFont.className}>
+      <body className={roboto.className}>
         <nav>
           
           <MyNav />
