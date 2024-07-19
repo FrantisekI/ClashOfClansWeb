@@ -1,11 +1,5 @@
-
-
 import React, { useState, useEffect } from 'react';
-
 import ClanWarEndTime from '../components/ClanWarEndTime'; 
-
-
-
 
 
 const Page: React.FC = () => {
