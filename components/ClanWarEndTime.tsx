@@ -2,20 +2,20 @@
 import React, { useState, useEffect } from 'react';
 
 interface ClanWarResponse {
-    war: {
-        endTime: string;
-    };
+  war: {
+    endTime: string;
+  };
 }
 
 const ClanWarEndTime: React.FC = () => {
-    const [warEndTime, setWarEndTime] = useState<string | null>(null);
+  const [warEndTime, setWarEndTime] = useState<string | null>(null);
 
-    useEffect(() => {
-        const fetchClanWarEndTime = async () => {
-            const clanTag = '#2PG29LY8J'; // Replace with your clan's tag
-            const apiToken = process.env.API_TOKEN; // Replace with your API token
+  useEffect(() => {
+    const fetchClanWarEndTime = async () => {
+      const clanTag = process.env.CLAN_TAG;
+      const apiToken = process.env.API_TOKEN;
 
-      const response = await fetch(`https://api.clashofclans.com/v1/clanwar/war/${clanTag}`, {
+      const response = await fetch(`https://api.clashofclans.com/v1/clans/${clanTag}/currentwar`, {
         headers: {
           'Authorization': `Bearer ${apiToken}`,
           'Accept': 'application/json',
