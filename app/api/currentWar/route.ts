@@ -4,8 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   const clanTag = process.env.CLAN_TAG;
   const apiToken = process.env.API_TOKEN;
-    console.log(`https://api.clashofclans.com/v1/clans/${encodeURIComponent(clanTag!)}/currentwar`);
-  try {
+    try {
     const response = await fetch(`https://api.clashofclans.com/v1/clans/%232PG29LY8J/currentwar`, {
       headers: {
         'Authorization': `Bearer ${apiToken}`,

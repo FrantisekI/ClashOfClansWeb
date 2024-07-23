@@ -10,7 +10,6 @@ function AnalyzeJson() {
     const justApart = jsonData['items'][0]['capitalTotalLoot'];
     let letArray = [];
     for (let i = jsonData['items'].length - 1; i >= 0; i--) {
-        //console.log(jsonData['items'][i]['capitalTotalLoot']);
         letArray.push(jsonData['items'][i]['capitalTotalLoot']);
     }
     console.log(letArray);
